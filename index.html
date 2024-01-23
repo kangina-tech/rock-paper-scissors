@@ -13,10 +13,15 @@
             const randomNum = choice[Math.floor(Math.random() * choice.length)];
         }
 
-        //player choice
-        // function getPlayerChoice() {
-        //     const playerChoice = prompt('Enter choice: ').toLowerCase;
-        // }
+        // player choice
+        function getPlayerChoice() {
+            const choice = ['rock', 'paper', 'scissors'];
+            const playerChoice = prompt('Enter choice: ').toLowerCase;
+
+            if(playerChoice != choice) {
+                return "Enter correct input";
+            }
+        }
 
         // player and score function
         function playRound(playerSelection, computerSelection) {
@@ -31,7 +36,7 @@
             }
         }
 
-        const playerSelection = prompt('Enter choice: ').toLowerCase();
+        const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
     </script>
