@@ -22,7 +22,7 @@
         function getPlayerChoice() {
             const playerChoice = prompt('Enter choice: ').toLowerCase;
 
-            if(playerChoice != choice) {
+            if(!(choice.includes(playerSelection))) {
                 console.warn("Enter correct value");
                 return getPlayerChoice();
             }
