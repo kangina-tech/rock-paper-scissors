@@ -23,7 +23,7 @@
             }
         }
 
-        // player and score function
+        // play function
         function playRound(playerSelection, computerSelection) {
             if (playerSelection === computerSelection) {
                 return "It's a tie";
@@ -33,6 +33,15 @@
                 return "You Lose!";
             } else {
                 return "You win!";
+            }
+        }
+
+        // game score function
+        function game() {
+            gameScore = 0;
+
+            for(let i = 0; i <= 5; i++) {
+                gameScore++;
             }
         }
 
