@@ -15,7 +15,7 @@ function getPlayerChoice() {
 
     if(!(choice.includes(playerSelection))) {
         console.warn("Enter correct value");
-        return getPlayerChoice();
+        return playerChoice();
     }
 }
 
@@ -34,24 +34,35 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// game score function
-// function game() {
-//     gameScore = 0;
 
-//     for(let i = 0; i < 5; i++) {
-//         getComputerChoice();
-//         getPlayerChoice();
-//         console.log(playRound(playerSelection, computerSelection));
-//     }
-//     if (playerScore > computerScore) {
-//         console.log("You win!");
-//     } else if (playerScore < computerScore) {
-//         console.log("You lose!");
-//     } else {
-//         console.log("It's a draw!")
-//     }
-// }
+playRound.addEventListener('click', () => {
+    const rock = document.querySelector('rock');
+    const paper = document.querySelector('paper');
+    const scissors = document.querySelector('scissors');
 
-// game()
+    console.log(playRound(playerSelection, computerSelection));
 
-// test line console.log(playRound(playerSelection, computerSelection));
+    const div = document.createElement('div');
+    
+    function game() {
+        gameScore = 0;
+
+        for(let i = 0; i < 5; i++) {
+            getComputerChoice();
+            getPlayerChoice();
+            console.log(playRound(playerSelection, computerSelection));
+        }
+        if (playerScore > computerScore) {
+            console.log('You win!');
+        }
+        else if (playerScore < computerScore) {
+            console.log('You lose!');
+        }
+        else {
+            console.log("It's a draw!");
+        }
+    }
+    game();
+
+    div.appendChild(game);
+});
