@@ -30,15 +30,3 @@ h1, .score, .moves, .option {
     font-weight: 700;
     border: none;
 }
-
-.reload {
-    margin: 0;
-    position: absolute;
-    top: 80%;
-    left: 46%;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
-    font-weight: 700;
-    background-color: pink;
-}
