@@ -1,0 +1,32 @@
+body {
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+}
+
+h1, .score, .moves, .option {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 30px;
+}
+
+.player {
+    margin-right: 50px;
+    text-align: center;
+}
+
+.computer {
+    margin-left: 50px;
+    text-align: center;
+}
+
+.rock, .paper, .scissors {
+    padding: 20px 30px;
+    margin: 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    border: none;
+}
