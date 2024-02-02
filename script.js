@@ -2,7 +2,7 @@ const choices = ['rock', 'paper', 'scissors'];
 const rockBtn = document.querySelector('.rock');
 const paperBtn = document.querySelector('.paper');
 const scissorsBtn = document.querySelector('.scissors');
-const result = document.querySelector('result');
+const result = document.querySelector('.result');
 
 function getComputerChoice() {
     let randomNum = choices[Math.floor(Math.random() * choices.length)];
@@ -45,18 +45,13 @@ function playGame() {
             const computerSelection = getComputerChoice();
             const playerSelection = [rockBtn, paperBtn, scissorsBtn];
 
-            winner(this.innerText, computerSelection)
-
-            if(moves == 5) {
-                gameOver(playerSelection, moves);
+            playRound(this.innerText, computerSelection)
             }
         })
     })
     
     const playerScoreBoard = document.querySelector('playerScore');
     const computerScoreBoard = document.querySelector('computerScore');
-    playerScore = playerScore.toLowerCase();
-    computerScore = computerScore.toLowerCase();
 
     if(playerScore > computerScore) {
         result.textContent = 'You win!';
