@@ -46,7 +46,6 @@ function playGame() {
             const playerSelection = [rockBtn, paperBtn, scissorsBtn];
 
             playRound(this.innerText, computerSelection)
-            }
         })
     })
     
