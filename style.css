@@ -6,7 +6,7 @@ body {
     background-color: black;
 }
 
-h1, .score, .moves, .option {
+h1, .score, .moves, .option, .result {
     display: flex;
     justify-content: center;
     align-content: center;
